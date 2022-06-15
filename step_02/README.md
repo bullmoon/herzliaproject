@@ -1,0 +1,1 @@
+Step 02 - build a docker image and push it on DockerHub

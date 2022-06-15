@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: www-srv
+  namespace: dev
+spec:
+  selector:
+    app: webapp
+  ports:
+    - name      : app-listener
+      protocol  : TCP
+      port      : 9003  # Port on Load Balancer
+      targetPort: 9003  # Port on POD
+  type: ClusterIP
